@@ -33,3 +33,7 @@ pip install -r requirements.txt
 ​```bash
 python core.py
 ​```
+
+## Patch Notes: (v1.1.0)
+- Now the get request has a 10sec timeout to avoid waiting for an endless time.
+- CSV output no longer has index column.

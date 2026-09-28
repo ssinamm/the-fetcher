@@ -1,6 +1,8 @@
 import requests
 import pandas as pd
 
+
+
 source = "https://openlibrary.org/search.json"
 
 parameters = {
@@ -10,10 +12,12 @@ parameters = {
 }
 
 
-resp = requests.get(source, params=parameters)
+
+resp = requests.get(source, params=parameters, timeout=14)
 
 
 raw_data = resp.json()
 data = pd.DataFrame(raw_data["docs"])
 
-data.to_csv("fetched_books_(core_v1.0.0).csv", encoding='utf-8-sig')
+
+data.to_csv("fetched_books_(core_v1.1.0).csv", index=False, encoding='utf-8-sig')
