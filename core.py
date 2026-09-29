@@ -1,5 +1,6 @@
 import requests
 import pandas as pd
+import ast
 
 
 # 1. Config
@@ -27,10 +28,13 @@ try:
 
     # 4. Transforming Data
     books_df = pd.DataFrame(raw_data["docs"])
+    books_df = books_df.map(
+        lambda x: ", ".join(x) if isinstance(x, list) else x
+    )
 
     # 5. Exporting Data
     books_df.to_csv(
-        "fetched_books_(core_v1.2.4).csv",
+        "fetched_books_(core_v1.3.4).csv",
          index=False,
          encoding="utf-8-sig"
     )

@@ -35,7 +35,7 @@ python core.py
 ​```
 
 ## Patch Notes: (v1.1.0)
-- Now the get request has a 10sec timeout to avoid waiting for an endless time.
+- Now the "get" request has a 10sec timeout to avoid waiting for an endless time.
 - CSV output no longer has index column.
 
 ## Patch Notes: (v1.2.4)
@@ -44,3 +44,6 @@ python core.py
 - Fixed : 'resp' has been changed to 'response'. (ver 1.2.2)
 - Fixed : added notes for each part to clarify what exactly is happening. (ver 1.2.3)
 - Fixed : for 'parameters' and 'books_df.to_csv' there improvments for better readability. (ver 1.2.4)
+
+## Patch Notes : (v1.3.4)
+- Dropped the ```bash ['']``` wrapper on the values across all the columns from final result.
